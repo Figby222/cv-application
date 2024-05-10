@@ -1,9 +1,11 @@
+import CVForm from './utility-components/CVForm.jsx';
+
 function Main() {
     return (
         <>
             <main>
                <dialog open={true}>
-                    <p>hi</p>
+                    <CVForm />
                 </dialog> 
             </main>
         </>
