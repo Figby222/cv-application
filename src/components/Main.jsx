@@ -1,12 +1,10 @@
-import Dialog from './utility-components/Dialog';
-
 function Main() {
     return (
         <>
             <main>
-               <Dialog open={true}>
+               <dialog open={true}>
                     <p>hi</p>
-                </Dialog> 
+                </dialog> 
             </main>
         </>
     )
