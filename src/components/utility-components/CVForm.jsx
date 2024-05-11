@@ -32,6 +32,7 @@ function School({
                     value: e.target.value
                 })}
             />
+            <label htmlFor="dateOfStudy">Date: </label>
             <input
                 type="date"
                 id="dateOfStudy"
