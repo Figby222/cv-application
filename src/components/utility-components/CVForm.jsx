@@ -40,7 +40,7 @@ function School({
                 value={dateOfStudy}
                 onChange={(e) => handleSchoolChange({
                     id,
-                    property: "field",
+                    property: "dateOfStudy",
                     value: e.target.value
                 })}
             />
