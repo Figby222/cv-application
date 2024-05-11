@@ -52,6 +52,9 @@ function CVForm({
 }) {
     const [ firstName, setFirstName ] = useState("");
     const [ lastName, setLastName ] = useState("");
+    const [ schools, setSchools ] = useState([{ id: 1, name: "", field: "", dateOfStudy: ""}]);
+    const [ schoolCount, setSchoolCount ] = useState(1);
+
     
     function handleFirstNameChange(e) {
         setFirstName(e.target.value);
