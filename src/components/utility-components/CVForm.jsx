@@ -18,6 +18,7 @@ function CVForm({
             <form method="post">
                 <h2>{heading}</h2>
                 <fieldset className="contact-info">
+                    <h3>Contact Info</h3>
                     <label>
                         First Name:&nbsp;
                         <input
