@@ -113,6 +113,7 @@ function CVForm({
                     </label>
                 </fieldset>
                 <fieldset>
+                    <h3>Education</h3>
                     {schools.map((school) => {
                         return <School
                             key={school.id}
