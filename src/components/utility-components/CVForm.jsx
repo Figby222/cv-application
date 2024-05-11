@@ -1,6 +1,18 @@
+import { useState } from 'react';
 function CVForm({
     heading,
 }) {
+    const [ firstName, setFirstName ] = useState("");
+    const [ lastName, setLastName ] = useState("");
+    
+    function handleFirstNameChange(e) {
+        setFirstName(e.target.value);
+    }
+
+    function handleLastNameChange(e) {
+        setLastName(e.target.value);
+    }
+
     return (
         <>
             <form method="post">
@@ -11,8 +23,10 @@ function CVForm({
                         <input
                             type="text"
                             id="first-name"
-                            name="first-name"
+                            name={"first-name"}
                             placeholder="John"
+                            value={firstName}
+                            onChange={handleFirstNameChange}
                         >
                         </input>
                     </label>
@@ -23,6 +37,8 @@ function CVForm({
                             id="last-name"
                             name="last-name"
                             placeholder="Doe"
+                            value={lastName}
+                            onChange={handleLastNameChange}
                         >
                         </input>
                     </label>
