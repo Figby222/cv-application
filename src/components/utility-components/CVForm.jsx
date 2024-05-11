@@ -67,8 +67,8 @@ function CVForm({
 
     function handleSchoolChange({ id, property, value }) {
         const newSchools = [...schools];
-        const index = newSchools.findIndex((school) => school.id = id);
-        newSchools[index] = {...schools[index], [property]: value};
+        const index = newSchools.findIndex((school) => school.id === id);
+        newSchools[index] = {...newSchools[index], [property]: value};
 
         setSchools(newSchools);
     }
