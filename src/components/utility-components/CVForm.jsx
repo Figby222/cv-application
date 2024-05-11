@@ -64,6 +64,14 @@ function CVForm({
         setLastName(e.target.value);
     }
 
+    function handleSchoolChange({ id, property, value }) {
+        const newSchools = [...schools];
+        const index = newSchools.findIndex((school) => school.id = id);
+        newSchools[index] = {...schools[index], [property]: value};
+
+        setSchools(newSchools);
+    }
+
     return (
         <>
             <form method="post">
