@@ -73,6 +73,12 @@ function CVForm({
         setSchools(newSchools);
     }
 
+    function handleAddSchool() {
+        setSchoolCount(schoolCount + 1);
+        const newSchool = { id: schoolCount, name: "", field: "", dateOfStudy: "" };
+        setSchools([...schools, newSchool]);
+    }
+
     return (
         <>
             <form method="post">
@@ -104,16 +110,22 @@ function CVForm({
                         </input>
                     </label>
                 </fieldset>
-                {schools.map((school) => {
-                    return <School
-                        key={school.id}
-                        id={school.id}
-                        name={school.name}
-                        field={school.field}
-                        dateOfStudy={school.dateOfStudy}
-                        handleSchoolChange={handleSchoolChange}
-                    />
-                })}
+                <fieldset>
+                    {schools.map((school) => {
+                        return <School
+                            key={school.id}
+                            id={school.id}
+                            name={school.name}
+                            field={school.field}
+                            dateOfStudy={school.dateOfStudy}
+                            handleSchoolChange={handleSchoolChange}
+                        />
+                    })}
+                    <button 
+                        type="button" 
+                        className="add-school"
+                        onClick={handleAddSchool}>Add School</button>
+                </fieldset>
             </form>
         </>
     )
