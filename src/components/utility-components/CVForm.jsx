@@ -74,8 +74,10 @@ function CVForm({
     }
 
     function handleAddSchool() {
-        setSchoolCount(schoolCount + 1);
-        const newSchool = { id: schoolCount, name: "", field: "", dateOfStudy: "" };
+        const currentId = schoolCount + 1;
+        setSchoolCount(currentId);
+
+        const newSchool = { id: currentId, name: "", field: "", dateOfStudy: "" };
         setSchools([...schools, newSchool]);
     }
 
