@@ -48,22 +48,10 @@ function School({
     )
 }
 
-function CVForm({
-    heading,
-}) {
-    const [ firstName, setFirstName ] = useState("");
-    const [ lastName, setLastName ] = useState("");
+function Education() {
+
     const [ schools, setSchools ] = useState([{ id: 1, name: "", field: "", dateOfStudy: ""}]);
     const [ schoolCount, setSchoolCount ] = useState(1);
-
-    
-    function handleFirstNameChange(e) {
-        setFirstName(e.target.value);
-    }
-
-    function handleLastNameChange(e) {
-        setLastName(e.target.value);
-    }
 
     function handleSchoolChange({ id, property, value }) {
         const newSchools = [...schools];
@@ -80,6 +68,44 @@ function CVForm({
         const newSchool = { id: currentId, name: "", field: "", dateOfStudy: "" };
         setSchools([...schools, newSchool]);
     }
+
+    return (
+        <>
+            <h3>Education</h3>
+            {schools.map((school) => {
+                return <School
+                    key={school.id}
+                    id={school.id}
+                    name={school.name}
+                    field={school.field}
+                    dateOfStudy={school.dateOfStudy}
+                    handleSchoolChange={handleSchoolChange}
+                />
+            })}
+            <button 
+                type="button" 
+                className="add-school"
+                onClick={handleAddSchool}>Add School</button>
+        </>
+    )
+}
+
+function CVForm({
+    heading,
+}) {
+    const [ firstName, setFirstName ] = useState("");
+    const [ lastName, setLastName ] = useState("");
+    
+
+    function handleFirstNameChange(e) {
+        setFirstName(e.target.value);
+    }
+
+    function handleLastNameChange(e) {
+        setLastName(e.target.value);
+    }
+
+    
 
     return (
         <>
@@ -113,21 +139,7 @@ function CVForm({
                     </label>
                 </fieldset>
                 <fieldset>
-                    <h3>Education</h3>
-                    {schools.map((school) => {
-                        return <School
-                            key={school.id}
-                            id={school.id}
-                            name={school.name}
-                            field={school.field}
-                            dateOfStudy={school.dateOfStudy}
-                            handleSchoolChange={handleSchoolChange}
-                        />
-                    })}
-                    <button 
-                        type="button" 
-                        className="add-school"
-                        onClick={handleAddSchool}>Add School</button>
+                    <Education />
                 </fieldset>
             </form>
         </>
