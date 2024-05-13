@@ -1,4 +1,4 @@
-import CVForm from './utility-components/CVForm.jsx';
+import CVForm from './utility-components/CVForm/CVForm.jsx';
 
 function Main() {
     return (
