@@ -15,12 +15,6 @@ function School({
                 type="text"
                 id="name"
                 name="name"
-                value={name}
-                onChange={(e) => handleSchoolChange({
-                    id,
-                    property: "name",
-                    value: e.target.value
-                })}
             />
             <label htmlFor="field">Field: </label>
             <input
@@ -38,12 +32,6 @@ function School({
                 type="date"
                 id="dateOfStudy"
                 name="dateOfStudy"
-                value={dateOfStudy}
-                onChange={(e) => handleSchoolChange({
-                    id,
-                    property: "dateOfStudy",
-                    value: e.target.value
-                })}
             />
         </section>
         </>
@@ -55,13 +43,6 @@ function Education() {
     const [ schools, setSchools ] = useState([{ id: 1, name: "", field: "", dateOfStudy: ""}]);
     const [ schoolCount, setSchoolCount ] = useState(1);
 
-    function handleSchoolChange({ id, property, value }) {
-        const newSchools = [...schools];
-        const index = newSchools.findIndex((school) => school.id === id);
-        newSchools[index] = {...newSchools[index], [property]: value};
-
-        setSchools(newSchools);
-    }
 
     function handleAddSchool() {
         const currentId = schoolCount + 1;
