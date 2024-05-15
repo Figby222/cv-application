@@ -25,6 +25,11 @@ function School({
                 id="dateOfStudy"
                 name="dateOfStudy"
             />
+            <button
+                type="button"
+                className="remove-school"
+                onClick={() => handleRemoveSchool(id)}
+            >Remove</button>
         </section>
         </>
     )
@@ -46,6 +51,10 @@ function Education() {
         // setSchools([...schools, newSchool]);
     }
 
+    function handleRemoveSchool(targetId) {
+        setSchoolIds(schoolIds.filter(id => id !== targetId));
+    }
+
     return (
         <>
             <h3>Education</h3>
@@ -53,6 +62,7 @@ function Education() {
                 return <School
                     key={id}
                     id={id}
+                    handleRemoveSchool={handleRemoveSchool}
                     // name={school.name}
                     // field={school.field}
                     // dateOfStudy={school.dateOfStudy}
