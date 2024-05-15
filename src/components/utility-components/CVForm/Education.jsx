@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import Input from '../Input.jsx';
 
 function School({
     id,
@@ -16,19 +17,14 @@ function School({
                 id="name"
                 name="name"
             />
-            <label htmlFor="field">Field: </label>
-            <input
+            <Input
+                label="Field: "
                 type="text"
                 id="field"
-                value={field}
-                onChange={(e) => handleSchoolChange({
-                    id,
-                    property: "field",
-                    value: e.target.value
-                })}
+                name="field"
             />
-            <label htmlFor="dateOfStudy">Date: </label>
-            <input
+            <Input
+                label="Date of study: "
                 type="date"
                 id="dateOfStudy"
                 name="dateOfStudy"
