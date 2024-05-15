@@ -3,10 +3,6 @@ import Input from '../Input.jsx';
 
 function School({
     id,
-    name,
-    field,
-    dateOfStudy,
-    handleSchoolChange
 }) {
     return (
         <>
@@ -36,29 +32,31 @@ function School({
 
 function Education() {
 
-    const [ schools, setSchools ] = useState([{ id: 1, name: "", field: "", dateOfStudy: ""}]);
+    const [ schoolIds, setSchoolIds ] = useState([1]);
     const [ schoolCount, setSchoolCount ] = useState(1);
 
 
     function handleAddSchool() {
         const currentId = schoolCount + 1;
         setSchoolCount(currentId);
+        setSchoolIds([...schoolIds, currentId])
+        // console.log(schools);
 
-        const newSchool = { id: currentId, name: "", field: "", dateOfStudy: "" };
-        setSchools([...schools, newSchool]);
+        // const newSchool = { id: currentId, name: "", field: "", dateOfStudy: "" };
+        // setSchools([...schools, newSchool]);
     }
 
     return (
         <>
             <h3>Education</h3>
-            {schools.map((school) => {
+            {schoolIds.map((id) => {
                 return <School
-                    key={school.id}
-                    id={school.id}
-                    name={school.name}
-                    field={school.field}
-                    dateOfStudy={school.dateOfStudy}
-                    handleSchoolChange={handleSchoolChange}
+                    key={id}
+                    id={id}
+                    // name={school.name}
+                    // field={school.field}
+                    // dateOfStudy={school.dateOfStudy}
+                    // handleSchoolChange={handleSchoolChange}
                 />
             })}
             <button 
