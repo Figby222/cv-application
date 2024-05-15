@@ -3,6 +3,7 @@ import Input from '../Input.jsx';
 
 function School({
     id,
+    handleRemoveSchool
 }) {
     return (
         <>
