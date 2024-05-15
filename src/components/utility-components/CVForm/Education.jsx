@@ -8,9 +8,10 @@ function School({
     handleSchoolChange
 }) {
     return (
-        <div className="school">
-            <label htmlFor="name">Name: </label>
-            <input 
+        <>
+        <section className="school" id={id}>
+            <Input 
+                label="Name: "
                 type="text"
                 id="name"
                 name="name"
@@ -44,7 +45,8 @@ function School({
                     value: e.target.value
                 })}
             />
-        </div>
+        </section>
+        </>
     )
 }
 
