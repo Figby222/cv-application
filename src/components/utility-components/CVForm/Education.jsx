@@ -48,9 +48,9 @@ function School({
     )
 }
 
-function Education() {
+function Education({ initialSchools }) {
 
-    const [ schools, setSchools ] = useState([{ id: 1, name: "", field: "", dateOfStudy: ""}]);
+    const [ schools, setSchools ] = useState(initialSchools);
     const [ schoolCount, setSchoolCount ] = useState(1);
 
     function handleSchoolChange({ id, property, value }) {
