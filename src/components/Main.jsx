@@ -16,9 +16,7 @@ function Main() {
     return (
         <>
             <main>
-               <dialog open={true}>
-                    <CVForm />
-                </dialog> 
+                <CVForm />
             </main>
         </>
     )
