@@ -19,7 +19,7 @@ function Main() {
     return (
         <>
             <main>
-                <CVForm />
+                <CVForm resume={resume}/>
             </main>
         </>
     )

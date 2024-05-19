@@ -5,6 +5,7 @@ import ContactInfo from './ContactInfo.jsx';
 
 function CVForm({
     heading,
+    resume,
 }) {
 
     return (
