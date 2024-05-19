@@ -5,7 +5,6 @@ import ContactInfo from './ContactInfo.jsx';
 
 function CVForm({
     heading,
-    initialSchools
 }) {
 
     return (
@@ -16,7 +15,7 @@ function CVForm({
                     <ContactInfo />
                 </fieldset>
                 <fieldset>
-                    <Education initialSchools={initialSchools} />
+                    <Education initialSchools={} />
                 </fieldset>
             </form>
         </>
@@ -25,7 +24,6 @@ function CVForm({
 
 CVForm.defaultProps = {
     heading: "Create a CV",
-    initialSchools: [{ id: 1, name: "", field: "", dateOfStudy: ""}]
 }
 
 export default CVForm;
