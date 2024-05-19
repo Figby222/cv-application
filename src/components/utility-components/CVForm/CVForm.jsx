@@ -16,7 +16,7 @@ function CVForm({
                     <ContactInfo initialContactInfo={resume.contactInfo}/>
                 </fieldset>
                 <fieldset>
-                    <Education initialSchools={} />
+                    <Education initialSchools={resume.schools} />
                 </fieldset>
             </form>
         </>
