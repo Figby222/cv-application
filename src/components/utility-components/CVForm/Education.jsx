@@ -22,10 +22,7 @@ function Education({
             {schools.map((school) => {
                 return <School
                     key={school.id}
-                    id={school.id}
-                    name={school.name}
-                    field={school.field}
-                    dateOfStudy={school.dateOfStudy}
+                    schoolObject={school}
                 />
             })}
             <button 

@@ -1,9 +1,5 @@
 function School({
-    id,
-    name,
-    field,
-    dateOfStudy,
-    handleSchoolChange
+    schoolObject,
 }) {
     return (
         <div className="school">
