@@ -1,10 +1,11 @@
+import Input from '../Input.jsx';
 function School({
     schoolObject,
 }) {
     return (
         <div className="school">
-            <label htmlFor="name">Name: </label>
-            <input 
+            <Input 
+                label="Name: "
                 type="text"
                 id="name"
                 name="name"
@@ -15,8 +16,8 @@ function School({
                     value: e.target.value
                 })}
             />
-            <label htmlFor="field">Field: </label>
-            <input
+            <Input
+                label="Field: "
                 type="text"
                 id="field"
                 name="field"
@@ -27,8 +28,8 @@ function School({
                     value: e.target.value
                 })}
             />
-            <label htmlFor="dateOfStudy">Date: </label>
-            <input
+            <Input
+                label="Date: "
                 type="date"
                 id="dateOfStudy"
                 name="dateOfStudy"
