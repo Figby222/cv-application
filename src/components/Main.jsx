@@ -7,7 +7,9 @@ const resume = {
         lastName: "",
         email: "",
     },
-    schools: [],
+    schools: [
+        { id: 1, name: "", field: "", dateOfStudy: ""}
+    ],
     jobs: []
 }
 
