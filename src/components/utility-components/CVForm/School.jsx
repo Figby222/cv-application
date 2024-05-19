@@ -1,7 +1,11 @@
 import Input from '../Input.jsx';
+import { useState } from 'react';
+
 function School({
     schoolObject,
 }) {
+    const [ school, setSchool ] = useState(schoolObject);
+    
     return (
         <div className="school">
             <Input 
