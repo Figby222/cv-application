@@ -2,6 +2,7 @@ import { useState } from 'react';
 import School from './School.jsx';
 
 function Education({ 
+    resume,
     initialSchools, 
     initialSchoolIdCounter
 }) {
