@@ -1,7 +1,7 @@
 import CVForm from './utility-components/CVForm/CVForm.jsx';
 import { useState } from 'react';
 
-const application = {
+const resume = {
     contactInfo: {
         firstName: "",
         lastName: "",
