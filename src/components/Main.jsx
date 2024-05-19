@@ -10,7 +10,7 @@ const resume = {
     schools: [
         { id: 1, name: "", field: "", dateOfStudy: ""}
     ],
-    highestSchoolId: 1,
+    schoolIdCounter: 1,
     jobs: []
 }
 
