@@ -4,9 +4,9 @@ function Input({
     id,
     name,
     placeholder,
-    edit
+    editing
 }) {
-    if (edit) {
+    if (editing) {
         return (
             <>
                 <label htmlFor={id}>{label}</label>
