@@ -6,15 +6,24 @@ function Input({
     placeholder,
     edit
 }) {
+    if (edit) {
+        return (
+            <>
+                <label htmlFor={id}>{label}</label>
+                <input 
+                    type={type}
+                    id={id}
+                    name={name}
+                    placeholder={placeholder}
+                />
+            </>
+        )
+    }
+
     return (
         <>
             <label htmlFor={id}>{label}</label>
-            <input 
-                type={type}
-                id={id}
-                name={name}
-                placeholder={placeholder}
-            />
+            <p id={id}></p>
         </>
     )
 }
