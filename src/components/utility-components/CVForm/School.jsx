@@ -13,7 +13,7 @@ function School({
                 type="text"
                 id="name"
                 name="name"
-                value={name}
+                value={school.name}
                 onChange={(e) => handleSchoolChange({
                     id,
                     property: "name",
@@ -25,7 +25,7 @@ function School({
                 type="text"
                 id="field"
                 name="field"
-                value={field}
+                value={school.field}
                 onChange={(e) => handleSchoolChange({
                     id,
                     property: "field",
@@ -37,7 +37,7 @@ function School({
                 type="date"
                 id="dateOfStudy"
                 name="dateOfStudy"
-                value={dateOfStudy}
+                value={school.dateOfStudy}
                 onChange={(e) => handleSchoolChange({
                     id,
                     property: "dateOfStudy",
