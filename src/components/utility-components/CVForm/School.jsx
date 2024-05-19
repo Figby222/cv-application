@@ -5,7 +5,15 @@ function School({
     schoolObject,
 }) {
     const [ school, setSchool ] = useState(schoolObject);
-    
+
+    function handleSchoolChange(property, value) {
+        const newSchool = {...school}
+        newSchool[property] = value;
+
+        setSchool(newSchool);
+        schoolObject[property] = value;
+    }
+
     return (
         <div className="school">
             <Input 
@@ -14,11 +22,7 @@ function School({
                 id="name"
                 name="name"
                 value={school.name}
-                onChange={(e) => handleSchoolChange({
-                    id,
-                    property: "name",
-                    value: e.target.value
-                })}
+                onChange={(e) => handleSchoolChange("name", e.target.value)}
             />
             <Input
                 label="Field: "
@@ -26,11 +30,7 @@ function School({
                 id="field"
                 name="field"
                 value={school.field}
-                onChange={(e) => handleSchoolChange({
-                    id,
-                    property: "field",
-                    value: e.target.value
-                })}
+                onChange={(e) => handleSchoolChange("field", e.target.value)}
             />
             <Input
                 label="Date: "
@@ -38,11 +38,7 @@ function School({
                 id="dateOfStudy"
                 name="dateOfStudy"
                 value={school.dateOfStudy}
-                onChange={(e) => handleSchoolChange({
-                    id,
-                    property: "dateOfStudy",
-                    value: e.target.value
-                })}
+                onChange={(e) => handleSchoolChange("dateOfStudy", e.target.value)}
             />
         </div>
     )
