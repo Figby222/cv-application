@@ -9,14 +9,14 @@ function ContactInfo() {
                 label="First Name: "
                 type="text"
                 id="first-name"
-                name={"first-name"}
+                name={"firstName"}
                 placeholder="John"
             />
             <Input
                 label="Last Name: "
                 type="text"
                 id="last-name"
-                name="last-name"
+                name="lastName"
                 placeholder="Doe"
             />
         </>

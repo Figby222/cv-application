@@ -25,6 +25,7 @@ function School({
             <input
                 type="text"
                 id="field"
+                name="field"
                 value={field}
                 onChange={(e) => handleSchoolChange({
                     id,
