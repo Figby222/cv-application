@@ -19,6 +19,12 @@ function Education({
         schoolsDataObject.schools = [...schoolsDataObject.schools, newSchool];
     }
 
+    function handleRemoveSchool(id) {
+        const newSchools = schools.filter(school => school.id !== id)
+        setSchools(newSchools);
+        schoolsDataObject.schools = newSchools;
+    }
+
     return (
         <>
             <h3>Education</h3>
@@ -26,6 +32,7 @@ function Education({
                 return <School
                     key={school.id}
                     schoolObject={school}
+                    handleRemoveSchool={handleRemoveSchool}
                 />
             })}
             <button 

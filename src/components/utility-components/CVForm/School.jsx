@@ -3,6 +3,7 @@ import { useState } from 'react';
 
 function School({
     schoolObject,
+    handleRemoveSchool
 }) {
     const [ school, setSchool ] = useState(schoolObject);
 
@@ -40,6 +41,11 @@ function School({
                 value={school.dateOfStudy}
                 onChange={(e) => handleSchoolChange("dateOfStudy", e.target.value)}
             />
+            <button 
+                type="button"
+                className="remove-school"
+                onClick={() => handleRemoveSchool(school.id)}
+            >Remove</button>
         </div>
     )
 }
