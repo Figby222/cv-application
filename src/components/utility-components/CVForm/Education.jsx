@@ -2,7 +2,7 @@ import { useState } from 'react';
 import School from './School.jsx';
 
 function Education({ 
-    schools, 
+    initialSchools, 
     initialSchoolIdCounter
 }) {
 
@@ -19,7 +19,7 @@ function Education({
     return (
         <>
             <h3>Education</h3>
-            {schools.map((school) => {
+            {initialSchools.map((school) => {
                 return <School
                     key={school.id}
                     schoolObject={school}

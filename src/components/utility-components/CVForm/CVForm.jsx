@@ -17,7 +17,7 @@ function CVForm({
                 </fieldset>
                 <fieldset>
                     <Education 
-                        schools={resume.schools} 
+                        initialSchools={resume.schools} 
                         initialSchoolIdCounter={resume.schoolIdCounter}
                     />
                 </fieldset>
