@@ -1,7 +1,9 @@
 import { useState } from 'react';
 import Input from '../Input.jsx';
 
-function ContactInfo() {
+function ContactInfo({
+    contactInfo,
+}) {
     return (
         <>
             <h3>Contact Info</h3>
