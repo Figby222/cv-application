@@ -7,7 +7,6 @@ function CVForm({
     heading,
     initialSchools
 }) {
-    const [ editing, setEditing ] = useState(true);
 
     return (
         <>
