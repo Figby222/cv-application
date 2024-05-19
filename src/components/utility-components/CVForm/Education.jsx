@@ -6,6 +6,7 @@ function Education({
     initialSchoolIdCounter
 }) {
 
+    const [ schools, setSchools ] = useState(initialSchools);
     const [ schoolCount, setSchoolCount ] = useState(1);
 
     function handleAddSchool() {
@@ -19,7 +20,7 @@ function Education({
     return (
         <>
             <h3>Education</h3>
-            {initialSchools.map((school) => {
+            {schools.map((school) => {
                 return <School
                     key={school.id}
                     schoolObject={school}
