@@ -4,6 +4,8 @@ function Input({
     id,
     name,
     placeholder,
+    value,
+    onChange,
 }) {
         return (
             <>
@@ -13,6 +15,8 @@ function Input({
                     id={id}
                     name={name}
                     placeholder={placeholder}
+                    value={value ? value : ""}
+                    onChange={onChange}
                 />
             </>
         )
