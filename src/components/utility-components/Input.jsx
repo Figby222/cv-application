@@ -4,9 +4,7 @@ function Input({
     id,
     name,
     placeholder,
-    editing
 }) {
-    if (editing) {
         return (
             <>
                 <label htmlFor={id}>{label}</label>
@@ -18,14 +16,6 @@ function Input({
                 />
             </>
         )
-    }
-
-    return (
-        <>
-            <label htmlFor={id}>{label}</label>
-            <p id={id}></p>
-        </>
-    )
 }
 
 export default Input;
