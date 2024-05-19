@@ -2,22 +2,23 @@ import { useState } from 'react';
 import School from './School.jsx';
 
 function Education({ 
-    resume,
-    initialSchools, 
-    initialSchoolIdCounter
+    schoolsDataObject
 }) {
 
-    const [ schools, setSchools ] = useState(initialSchools);
-    const [ schoolIdCounter, setSchoolIdCounter ] = useState(initialSchoolIdCounter);
+    const [ schools, setSchools ] = useState(schoolsDataObject.schools);
+    const [ schoolIdCounter, setSchoolIdCounter ] = 
+        useState(schoolsDataObject.schoolIdCounter);
 
     function handleAddSchool() {
         const currentId = schoolIdCounter + 1;
         setSchoolIdCounter(currentId);
         
-        initialSchoolIdCounter = currentId;
+        schoolsDataObject.schoolIdCounter = currentId;
 
         const newSchool = { id: currentId, name: "", field: "", dateOfStudy: "" };
         setSchools([...schools, newSchool]);
+
+        schoolsDataObject.schools = [...schoolsDataObject.schools, newSchool];
     }
 
     return (
