@@ -1,7 +1,10 @@
 import { useState } from 'react';
 import School from './School.jsx';
 
-function Education({ initialSchools }) {
+function Education({ 
+    initialSchools, 
+    initialSchoolIdCounter
+}) {
 
     const [ schools, setSchools ] = useState(initialSchools);
     const [ schoolCount, setSchoolCount ] = useState(1);
