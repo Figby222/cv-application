@@ -6,7 +6,7 @@ function School({
     handleSchoolChange
 }) {
     return (
-        <div>
+        <div className="school">
             <label htmlFor="name">Name: </label>
             <input 
                 type="text"
