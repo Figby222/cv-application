@@ -35,6 +35,24 @@ function ContactInfo({
                 value={contactInfo.lastName}
                 onChange={(e) => handleValueChange("lastName", e.target.value)}
             />
+            <Input
+                label="Email: "
+                type="email"
+                id="email"
+                name="email"
+                placeholder="JohnDoe@yahoo.com"
+                value={contactInfo.email}
+                onChange={(e) => handleValueChange("email", e.target.value)}
+            />
+            <Input
+                label="Phone Number: "
+                type="tel"
+                id="phone-number"
+                name="phoneNumber"
+                placeholder="(555) 555-5555"
+                value={contactInfo.phoneNumber}
+                onChange={(e) => handleValueChange("phoneNumber", e.target.value)}
+            />
         </>
     )
 }
