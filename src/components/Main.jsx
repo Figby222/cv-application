@@ -6,6 +6,7 @@ const resume = {
         firstName: "",
         lastName: "",
         email: "",
+        phoneNumber: ""
     },
     schoolsData: {
         schoolIdCounter: 1,
