@@ -6,14 +6,12 @@ function Education({
 }) {
 
     const [ schools, setSchools ] = useState(schoolsDataObject.schools);
-    const [ schoolIdCounter, setSchoolIdCounter ] = 
-        useState(schoolsDataObject.schoolIdCounter);
 
     function handleAddSchool() {
-        const currentId = schoolIdCounter + 1;
-        setSchoolIdCounter(currentId);
+        const currentId = schoolsDataObject.schoolIdCounter + 1;
         
         schoolsDataObject.schoolIdCounter = currentId;
+        console.log(schoolsDataObject.schoolIdCounter)
 
         const newSchool = { id: currentId, name: "", field: "", dateOfStudy: "" };
         setSchools([...schools, newSchool]);
