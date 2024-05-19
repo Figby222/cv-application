@@ -3,7 +3,8 @@ function Input({
     type,
     id,
     name,
-    placeholder
+    placeholder,
+    edit
 }) {
     return (
         <>
