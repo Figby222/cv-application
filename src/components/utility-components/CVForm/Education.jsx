@@ -6,16 +6,7 @@ function Education({
     initialSchoolIdCounter
 }) {
 
-    const [ schools, setSchools ] = useState(initialSchools);
     const [ schoolCount, setSchoolCount ] = useState(1);
-
-    function handleSchoolChange({ id, property, value }) {
-        const newSchools = [...schools];
-        const index = newSchools.findIndex((school) => school.id === id);
-        newSchools[index] = {...newSchools[index], [property]: value};
-
-        setSchools(newSchools);
-    }
 
     function handleAddSchool() {
         const currentId = schoolCount + 1;
@@ -35,7 +26,6 @@ function Education({
                     name={school.name}
                     field={school.field}
                     dateOfStudy={school.dateOfStudy}
-                    handleSchoolChange={handleSchoolChange}
                 />
             })}
             <button 
