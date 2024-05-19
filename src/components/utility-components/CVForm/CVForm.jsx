@@ -13,7 +13,7 @@ function CVForm({
             <form method="post">
                 <h2>{heading}</h2>
                 <fieldset className="contact-info">
-                    <ContactInfo contactInfo={resume.contactInfo}/>
+                    <ContactInfo initialContactInfo={resume.contactInfo}/>
                 </fieldset>
                 <fieldset>
                     <Education initialSchools={} />

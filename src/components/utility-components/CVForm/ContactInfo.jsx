@@ -2,7 +2,7 @@ import { useState } from 'react';
 import Input from '../Input.jsx';
 
 function ContactInfo({
-    contactInfo,
+    initialContactInfo,
 }) {
     return (
         <>
