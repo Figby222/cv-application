@@ -11,7 +11,9 @@ function Education({
 
     function handleAddSchool() {
         const currentId = schoolIdCounter + 1;
-        setSchoolIdCounterCount(currentId);
+        setSchoolIdCounter(currentId);
+        
+        initialSchoolIdCounter = currentId;
 
         const newSchool = { id: currentId, name: "", field: "", dateOfStudy: "" };
         setSchools([...schools, newSchool]);
