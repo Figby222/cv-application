@@ -22,7 +22,7 @@ function CVForm({
                     />
                 </fieldset>
                 <fieldset>
-                    <WorkExperience />
+                    <WorkExperience jobsDataObject={resume.jobsData} />
                 </fieldset>
             </form>
         </>

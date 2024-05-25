@@ -1,4 +1,6 @@
-function WorkExperience() {
+function WorkExperience({
+    jobsDataObject,
+}) {
     return (
         <>
         <section className="workExperience">
