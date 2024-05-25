@@ -14,7 +14,12 @@ const resume = {
             { id: 1, name: "", field: "", dateOfStudy: ""}
         ],
     },
-    jobs: []
+    jobsData: {
+        jobIdCounter: 1,
+        jobs: [
+            { id: 1, title: "", responsibilities: "", startDate: "", endDate: "" }
+        ],
+    }
 }
 
 function Main() {
