@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import Education from './Education.jsx';
 import ContactInfo from './ContactInfo.jsx';
+import WorkExperience from './WorkExperience.jsx';
 
 
 function CVForm({
@@ -19,6 +20,9 @@ function CVForm({
                     <Education 
                         schoolsDataObject={resume.schoolsData}
                     />
+                </fieldset>
+                <fieldset>
+                    <WorkExperience />
                 </fieldset>
             </form>
         </>
