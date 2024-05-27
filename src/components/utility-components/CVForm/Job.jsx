@@ -15,6 +15,14 @@ function Job({
     }
     return (
         <>
+           <Input 
+                id={"job-title"}
+                label="Job Title: "
+                name="job-title"
+                placeholder="Construction worker"
+                value={jobObject.title}
+                onChange={(e) => handleJobChange("title", e.target.value)}
+           /> 
         </>
     )
 }
