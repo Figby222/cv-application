@@ -4,9 +4,7 @@ function WorkExperience({
 }) {
     return (
         <>
-        <section className="workExperience">
-
-        </section>
+        
         </>
     )
 }
