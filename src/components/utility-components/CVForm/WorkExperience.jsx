@@ -31,6 +31,10 @@ function WorkExperience({
         jobsDataObject.jobs = [ ...jobsDataObject.jobs, newJob ]
         jobsDataObject.jobIdCounter = currentId;
     }
+    function handleRemoveJob(id) {
+        setJobIds(jobIds.filter(currentId => currentId != id));
+        jobsDataObject.jobs = jobsDataObject.jobs.filter(job => job.id != id);
+    }
 
     return (
         <>
@@ -41,6 +45,7 @@ function WorkExperience({
                     <li key={job.id}>
                         <Job
                             jobObject={job}
+                            handleRemoveJob={handleRemoveJob}
                         />
                     </li>
                 )

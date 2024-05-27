@@ -3,6 +3,7 @@ import { useState } from 'react';
 
 function Job({
     jobObject,
+    handleRemoveJob,
 }) {
 
     const [ job, setJob ] = useState(jobObject);
@@ -14,6 +15,7 @@ function Job({
         setJob(newJob)
     }
     return (
+        // wrap in fieldset 
         <>
             <Input 
                 id="job-companyName"
@@ -58,6 +60,7 @@ function Job({
                 value={jobObject.endDate}
                 onChange={(e) => handleJobChange("endDate", e.target.value)}
             />
+            <button type="button" onClick={() => handleRemoveJob(jobObject.id)}>Remove</button>
         </>
     )
 }
