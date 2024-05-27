@@ -1,4 +1,6 @@
-function Job() {
+function Job({
+    jobObject,
+}) {
     return (
         <>
         </>
