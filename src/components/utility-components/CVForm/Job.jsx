@@ -27,6 +27,7 @@ function Job({
            <Input 
                 id={"job-title"}
                 label="Job Title: "
+                type="text"
                 name="job-title"
                 placeholder="Construction worker"
                 value={jobObject.title}
