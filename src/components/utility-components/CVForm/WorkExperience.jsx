@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import Job from './Job.jsx';
 import { useState } from 'react';
 function WorkExperience({
@@ -12,12 +13,17 @@ function WorkExperience({
     return (
         <>
         <h3>Work Experience</h3>
-        {jobsDataObject.jobs.map(job => {
-            return <Job 
-                key={job.id}
-                jobObject={job}
-            />
-        })}
+        <ul className='jobs'>
+            {jobsDataObject.jobs.map(job => {
+                return (
+                    <li key={job.id}>
+                        <Job
+                            jobObject={job}
+                        />
+                    </li>
+                )
+            })}
+        </ul>
         </>
     )
 }
