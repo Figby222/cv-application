@@ -28,7 +28,7 @@ function Education({
     return (
         <>
             <h3>Education</h3>
-            {schools.map((school) => {
+            {schoolsDataObject.schools.map((school) => {
                 return <School
                     key={school.id}
                     schoolObject={school}
