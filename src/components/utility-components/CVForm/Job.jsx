@@ -24,15 +24,15 @@ function Job({
                 value={jobObject.companyName}
                 onChange={(e) => handleJobChange("companyName", e.target.value)}
             />
-           <Input 
-                id={"job-title"}
-                label="Job Title: "
-                type="text"
-                name="job-title"
-                placeholder="Construction worker"
-                value={jobObject.title}
-                onChange={(e) => handleJobChange("title", e.target.value)}
-           /> 
+            <Input 
+                    id={"job-title"}
+                    label="Job Title: "
+                    type="text"
+                    name="job-title"
+                    placeholder="Construction worker"
+                    value={jobObject.title}
+                    onChange={(e) => handleJobChange("title", e.target.value)}
+            />
         </>
     )
 }
