@@ -50,6 +50,14 @@ function Job({
                 value={jobObject.startDate}
                 onChange={(e) => handleJobChange("startDate", e.target.value)}
             />
+            <Input 
+                id="job-endDate"
+                label="End Date: "
+                type="date"
+                name="job-endDate"
+                value={jobObject.endDate}
+                onChange={(e) => handleJobChange("endDate", e.target.value)}
+            />
         </>
     )
 }
