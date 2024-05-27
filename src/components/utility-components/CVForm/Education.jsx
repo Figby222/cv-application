@@ -5,24 +5,24 @@ function Education({
     schoolsDataObject
 }) {
 
-    const [ schools, setSchools ] = useState(schoolsDataObject.schools);
+    const [ schoolIds, setSchoolIds ] = useState(
+        schoolsDataObject.schools.filter(school => school.id)
+    );
 
     function handleAddSchool() {
         const currentId = schoolsDataObject.schoolIdCounter + 1;
-        
-        schoolsDataObject.schoolIdCounter = currentId;
-        console.log(schoolsDataObject.schoolIdCounter)
-
         const newSchool = { id: currentId, name: "", field: "", dateOfStudy: "" };
-        setSchools([...schools, newSchool]);
 
+        setSchoolIds([ ...schoolIds, newSchool.id ])
+        
         schoolsDataObject.schools = [...schoolsDataObject.schools, newSchool];
+        schoolsDataObject.schoolIdCounter = currentId;
     }
 
     function handleRemoveSchool(id) {
-        const newSchools = schools.filter(school => school.id !== id)
-        setSchools(newSchools);
-        schoolsDataObject.schools = newSchools;
+        setSchoolIds(schoolIds.filter(currentId => currentId !== id));
+        schoolsDataObject.schools = schoolsDataObject.schools
+            .filter(school => school.id !== id)
     }
 
     return (
