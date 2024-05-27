@@ -3,9 +3,6 @@ function Job({
 }) {
     return (
         <>
-        <section className="job">
-
-        </section>
         </>
     )
 }
