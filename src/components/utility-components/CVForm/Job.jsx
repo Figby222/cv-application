@@ -42,6 +42,14 @@ function Job({
                 value={jobObject.responsibilities}
                 onChange={(e) => handleJobChange("responsibilities", e.target.value)}
             />
+            <Input 
+                id="job-startDate"
+                label="Start Date: "
+                type="date"
+                name="job-startDate"
+                value={jobObject.startDate}
+                onChange={(e) => handleJobChange("startDate", e.target.value)}
+            />
         </>
     )
 }
