@@ -33,6 +33,15 @@ function Job({
                     value={jobObject.title}
                     onChange={(e) => handleJobChange("title", e.target.value)}
             />
+            <Input 
+                id="job-responsibilities"
+                label="Main responsibilities: "
+                type="text"
+                name="job-responsibilities"
+                placeholder="Operating crane, heavy lifting"
+                value={jobObject.responsibilities}
+                onChange={(e) => handleJobChange("responsibilities", e.target.value)}
+            />
         </>
     )
 }
