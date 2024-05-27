@@ -28,7 +28,7 @@ function WorkExperience({
         setJobIds([...jobIds, newJob.id])
         setJobIdCounter(currentId)
 
-        jobsDataObject.jobs = { ...jobsDataObject.jobs, newJob }
+        jobsDataObject.jobs = [ ...jobsDataObject.jobs, newJob ]
         jobsDataObject.jobIdCounter = currentId;
     }
 
