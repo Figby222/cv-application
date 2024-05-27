@@ -17,7 +17,7 @@ const resume = {
     jobsData: {
         jobIdCounter: 1,
         jobs: [
-            { id: 1, title: "", responsibilities: "", startDate: "", endDate: "" }
+            { id: 1, companyName: "", title: "", responsibilities: "", startDate: "", endDate: "" }
         ],
     }
 }
