@@ -15,6 +15,15 @@ function Job({
     }
     return (
         <>
+            <Input 
+                id="job-companyName"
+                label="Company name: "
+                type="text"
+                name="job-companyName"
+                placeholder="MicroSoft"
+                value={jobObject.companyName}
+                onChange={(e) => handleJobChange("companyName", e.target.value)}
+            />
            <Input 
                 id={"job-title"}
                 label="Job Title: "
