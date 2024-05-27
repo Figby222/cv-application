@@ -8,8 +8,30 @@ function WorkExperience({
     const [ jobIds, setJobIds ] = useState(
         jobsDataObject.jobs.map(job => job.id)
     )
+    // remove jobIdCounter state
 
     
+    function handleAddJob() {
+        const currentId = jobIdCounter + 1;
+        
+        
+
+        const newJob = {
+            id: currentId,
+            name: "",
+            title: "",
+            responsibilities: "",
+            startDate: "",
+            endDate: "",
+        }
+
+        setJobIds([...jobIds, newJob.id])
+        setJobIdCounter(currentId)
+
+        jobsDataObject.jobs = { ...jobsDataObject.jobs, newJob }
+        jobsDataObject.jobIdCounter = currentId;
+    }
+
     return (
         <>
         <h3>Work Experience</h3>
@@ -24,6 +46,7 @@ function WorkExperience({
                 )
             })}
         </ul>
+        <button type="button" onClick={handleAddJob}>Add Job</button>
         </>
     )
 }
