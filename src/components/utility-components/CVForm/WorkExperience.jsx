@@ -12,6 +12,12 @@ function WorkExperience({
     return (
         <>
         <h3>Work Experience</h3>
+        {jobsDataObject.jobs.map(job => {
+            return <Job 
+                key={job.id}
+                jobObject={job}
+            />
+        })}
         </>
     )
 }
