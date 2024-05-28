@@ -16,6 +16,26 @@ function CVDisplay({
                 Phone: {resume.contactInfo.phoneNumber}
             </p>
         </section>
+        <section className="education">
+            <h3>Education</h3>
+            <ul className="schools">
+                {resume.schoolsData.schools.map(school => {
+                    return (
+                        <>
+                        <li className="school-name">
+                            <h4>{school.name}</h4>
+                            <p className="school-field">
+                                Field: {school.field}
+                            </p>
+                            <p className="school-dateOfStudy">
+                                Date of Study: {school.dateOfStudy}
+                            </p>
+                        </li>
+                        </>
+                    )
+                })}
+            </ul>
+        </section>
         </>
     )
 }
