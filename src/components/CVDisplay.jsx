@@ -36,6 +36,32 @@ function CVDisplay({
                 })}
             </ul>
         </section>
+        <section className="workExperience">
+            <h3>Work Experience</h3>
+            <ul className="jobs">
+                {resume.jobsData.jobs.map(job => {
+                    return (
+                        <>
+                        <li className="job">
+                            <h4>{job.companyName}</h4>
+                            <p className="job-title">
+                                Job Title: {job.title}
+                            </p>
+                            <p className="job-responsibilities">
+                                Main Responsibilities: {job.responsibilities}
+                            </p>
+                            <p className="job-startDate">
+                                Start Date: {job.startDate}
+                            </p>
+                            <p className="job-endDate">
+                                End Date: {job.endDate}
+                            </p>
+                        </li>
+                        </>
+                    )
+                })}
+            </ul>
+        </section>
         </>
     )
 }
