@@ -12,7 +12,7 @@ function CVForm({
 
     return (
         <>
-            <form method="post">
+            <form method="post" onSubmit={handleFormSubmit}>
                 <h2>{heading}</h2>
                 <fieldset className="contact-info">
                     <ContactInfo initialContactInfo={resume.contactInfo}/>
@@ -25,7 +25,7 @@ function CVForm({
                 <fieldset>
                     <WorkExperience jobsDataObject={resume.jobsData} />
                 </fieldset>
-                <button type="submit" onClick={handleFormSubmit}>Submit</button>
+                <button type="submit">Submit</button>
             </form>
         </>
     )
