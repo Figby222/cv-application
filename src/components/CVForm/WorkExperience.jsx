@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 import Job from './Job.jsx';
 import { useState } from 'react';
+import '../../styles/WorkExperience.css';
 function WorkExperience({
     jobsDataObject,
 }) {
