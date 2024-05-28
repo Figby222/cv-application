@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import Input from '../Input.jsx';
+import Input from '../utility-components/Input.jsx';
 
 function ContactInfo({
     initialContactInfo,

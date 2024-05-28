@@ -1,4 +1,4 @@
-import Input from '../Input.jsx';
+import Input from '../utility-components/Input.jsx';
 import { useState } from 'react';
 
 function Job({
