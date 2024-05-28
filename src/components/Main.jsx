@@ -28,7 +28,7 @@ function Main() {
     return (
         <>
             <main>
-                <CVForm resume={resume}/>
+                {editing ? <CVForm resume={resume}/> : <CVDisplay resume={resume}/>}
             </main>
         </>
     )
