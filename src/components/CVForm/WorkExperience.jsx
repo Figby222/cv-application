@@ -38,7 +38,7 @@ function WorkExperience({
         <ul className='jobs'>
             {jobsDataObject.jobs.map(job => {
                 return (
-                    <li key={job.id}>
+                    <li className="job" key={job.id}>
                         <Job
                             jobObject={job}
                             handleRemoveJob={handleRemoveJob}
