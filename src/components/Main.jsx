@@ -34,7 +34,7 @@ function Main() {
         <>
             <main>
                 {editing ? <CVForm resume={resume} handleFormSubmit={handleToggleEditing}/> : 
-                    <CVDisplay resume={resume}/>}
+                    <CVDisplay resume={resume} handleSetEditing={handleToggleEditing}/>}
             </main>
         </>
     )

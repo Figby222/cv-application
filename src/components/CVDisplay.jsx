@@ -1,5 +1,6 @@
 function CVDisplay({
     resume,
+    handleSetEditing,
 }) {
     return (
         <>
@@ -62,6 +63,7 @@ function CVDisplay({
                 })}
             </ul>
         </section>
+        <button type="button" onClick={handleSetEditing}>Edit</button>
         </>
     )
 }
