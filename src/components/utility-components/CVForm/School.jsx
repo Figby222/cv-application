@@ -20,24 +20,24 @@ function School({
             <Input 
                 label="Name: "
                 type="text"
-                id="name"
-                name="name"
+                id="school-name"
+                name="school-name"
                 value={school.name}
                 onChange={(e) => handleSchoolChange("name", e.target.value)}
             />
             <Input
                 label="Field: "
                 type="text"
-                id="field"
-                name="field"
+                id="school-field"
+                name="school-field"
                 value={school.field}
                 onChange={(e) => handleSchoolChange("field", e.target.value)}
             />
             <Input
                 label="Date: "
                 type="date"
-                id="dateOfStudy"
-                name="dateOfStudy"
+                id="school-dateOfStudy"
+                name="school-dateOfStudy"
                 value={school.dateOfStudy}
                 onChange={(e) => handleSchoolChange("dateOfStudy", e.target.value)}
             />
