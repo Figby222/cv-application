@@ -6,7 +6,7 @@ function Education({
 }) {
 
     const [ schoolIds, setSchoolIds ] = useState(
-        schoolsDataObject.schools.filter(school => school.id)
+        schoolsDataObject.schools.map(school => school.id)
     );
 
     function handleAddSchool() {
