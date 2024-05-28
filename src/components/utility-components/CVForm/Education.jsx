@@ -28,13 +28,19 @@ function Education({
     return (
         <>
             <h3>Education</h3>
-            {schoolsDataObject.schools.map((school) => {
-                return <School
-                    key={school.id}
-                    schoolObject={school}
-                    handleRemoveSchool={handleRemoveSchool}
-                />
-            })}
+            <ul className="schools">
+                {schoolsDataObject.schools.map((school) => {
+                    return (
+                        <li className="school" key={school.id}>
+                            <School
+                                schoolObject={school}
+                                handleRemoveSchool={handleRemoveSchool}
+                            />
+                        </li>
+
+                    )
+                })}
+            </ul>
             <button 
                 type="button" 
                 className="add-school"
