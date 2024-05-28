@@ -20,6 +20,7 @@ function Input({
                         placeholder={placeholder}
                         value={value ? value : ""}
                         onChange={onChange}
+                        required={true}
                     />
                 </div>
             </>
