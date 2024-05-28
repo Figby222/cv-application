@@ -26,14 +26,14 @@ const resume = {
 function Main() {
     const [ editing, setEditing ] = useState(true);
 
-    function handleFormSubmit() {
+    function handleToggleEditing() {
         setEditing(!editing);
     }
 
     return (
         <>
             <main>
-                {editing ? <CVForm resume={resume} handleFormSubmit={handleFormSubmit}/> : 
+                {editing ? <CVForm resume={resume} handleFormSubmit={handleToggleEditing}/> : 
                     <CVDisplay resume={resume}/>}
             </main>
         </>
