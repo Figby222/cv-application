@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import School from './School.jsx';
+import '../../styles/Education.css';
 
 function Education({ 
     schoolsDataObject
