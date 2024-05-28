@@ -4,6 +4,17 @@ function CVDisplay({
     return (
         <>
         <h2>Curriculum Vitae</h2>
+        <section className="contactInfo">
+            <p className="name">
+                Name: { resume.contactInfo.firstName + " " + resume.contactInfo.lastName }
+            </p>
+            <p className="email">
+                Email: {resume.contactInfo.email}
+            </p>
+            <p className="phoneNumber">
+                Phone: {resume.contactInfo.phoneNumber}
+            </p>
+        </section>
         </>
     )
 }
