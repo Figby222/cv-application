@@ -1,3 +1,5 @@
+import '../../styles/Input.css';
+
 function Input({
     label,
     type,
