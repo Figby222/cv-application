@@ -5,6 +5,7 @@ function CVDisplay({
         <>
         <h2>Curriculum Vitae</h2>
         <section className="contactInfo">
+            <h3>Contact Info</h3>
             <p className="name">
                 Name: { resume.contactInfo.firstName + " " + resume.contactInfo.lastName }
             </p>
