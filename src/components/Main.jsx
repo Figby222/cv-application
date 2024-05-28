@@ -25,10 +25,16 @@ const resume = {
 
 function Main() {
     const [ editing, setEditing ] = useState(true);
+
+    function handleFormSubmit() {
+        setEditing(!editing);
+    }
+
     return (
         <>
             <main>
-                {editing ? <CVForm resume={resume}/> : <CVDisplay resume={resume}/>}
+                {editing ? <CVForm resume={resume} handleFormSubmit={handleFormSubmit}/> : 
+                    <CVDisplay resume={resume}/>}
             </main>
         </>
     )

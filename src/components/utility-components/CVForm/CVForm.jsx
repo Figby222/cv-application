@@ -7,6 +7,7 @@ import WorkExperience from './WorkExperience.jsx';
 function CVForm({
     heading,
     resume,
+    handleFormSubmit,
 }) {
 
     return (
@@ -24,6 +25,7 @@ function CVForm({
                 <fieldset>
                     <WorkExperience jobsDataObject={resume.jobsData} />
                 </fieldset>
+                <button type="submit" onClick={handleFormSubmit}>Submit</button>
             </form>
         </>
     )
