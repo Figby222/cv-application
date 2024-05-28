@@ -1,6 +1,7 @@
 import CVForm from './CVForm/CVForm.jsx';
 import CVDisplay from './CVDisplay.jsx';
 import { useState } from 'react';
+import '../styles/Main.css';
 
 const resume = {
     contactInfo: {
