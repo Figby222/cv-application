@@ -22,7 +22,7 @@ function CVDisplay({
                 {resume.schoolsData.schools.map(school => {
                     return (
                         <>
-                        <li className="school-name">
+                        <li className="school">
                             <h4>{school.name}</h4>
                             <p className="school-field">
                                 Field: {school.field}
