@@ -1,4 +1,5 @@
 import CVForm from './utility-components/CVForm/CVForm.jsx';
+import CVDisplay from './CVDisplay.jsx';
 import { useState } from 'react';
 
 const resume = {
