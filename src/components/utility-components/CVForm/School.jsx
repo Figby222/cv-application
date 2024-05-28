@@ -16,7 +16,7 @@ function School({
     }
 
     return (
-        <div className="school">
+        <>
             <Input 
                 label="Name: "
                 type="text"
@@ -46,7 +46,7 @@ function School({
                 className="remove-school"
                 onClick={() => handleRemoveSchool(school.id)}
             >Remove</button>
-        </div>
+        </>
     )
 }
 
