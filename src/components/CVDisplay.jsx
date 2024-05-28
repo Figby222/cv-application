@@ -3,6 +3,7 @@ function CVDisplay({
 }) {
     return (
         <>
+        <h2>Curriculum Vitae</h2>
         </>
     )
 }
